@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+            Scanner sc = new Scanner(System.in);
+    int N = sc.nextInt();
+    List<String> str = new ArrayList();
+    for(int i=0;i<N;i++)
+        str.add(sc.next());
+    int Q = sc.nextInt();
+    for(int i=0;i<Q;i++){
+        String scheck = sc.next();
+        int count = 0;
+        for(int j=0;j<N;j++)
+            if(scheck.equals(str.get(j))) count++;
+        System.out.println(count);
+    } 
+    }
+}
